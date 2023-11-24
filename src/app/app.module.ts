@@ -15,6 +15,13 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { CitiesComponent } from './components/cities/cities.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HttpClientModule } from '@angular/common/http';
+
+import { RouterModule, Routes } from "@angular/router";
+
+const appRoutes: Routes = [
+  {path:'' , component:NewsComponent }
+]
 
 @NgModule({
   declarations: [
@@ -34,7 +41,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

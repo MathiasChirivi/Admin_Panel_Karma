@@ -1,2 +1,41 @@
-<p>dashboard works!</p>
+<div class="top-section">
+    <div class="widget-container">
+        <div class="widget green">
+          <div class="icon">
+            <fa-icon [icon]="faNewspaper"></fa-icon>
+          </div>
+          <div class="value">
+            <div class="top">{{ newsCount }}</div>
+            <div class="bottom">News</div>
+          </div>
+        </div>
+        <div class="widget yellow">
+          <div class="icon">
+            <fa-icon [icon]="faBandage"></fa-icon>
+          </div>
+          <div class="value">
+            <div class="top">{{ bannersCount }}</div>
+            <div class="bottom">Banners</div>
+          </div>
+        </div>
+      <div class="widget red">
+          <div class="icon">
+            <fa-icon [icon]="faList"></fa-icon>
+          </div>
+          <div class="value">
+            <div class="top">{{categoriesCount}}</div>
+            <div class="bottom">Categories</div>
+          </div>
+        </div>
+          <div class="widget blue">
+          <div class="icon">
+            <fa-icon [icon]="faCity"></fa-icon>
+          </div>
+          <div class="value">
+            <div class="top">{{citiesCount}}</div>
+            <div class="bottom">Cities</div>
+          </div>
+        </div>
+      </div>
+</div>
 
