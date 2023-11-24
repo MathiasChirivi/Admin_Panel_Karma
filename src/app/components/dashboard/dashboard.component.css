@@ -1,6 +1,6 @@
 .widget-container {
   display: flex;
-  align-items: space-between;
+  align-items: center;
 }
 
 .widget {
@@ -97,13 +97,13 @@
 @media only screen and (max-width: 1200px) {
   .widget-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
   }
 
   .widget {
-    width: 30%; 
-    margin-bottom: 10px; 
+    width: 30%;
+    margin-bottom: 10px;
   }
 }
 
@@ -115,8 +115,8 @@
   }
 
   .widget {
-    width: 80%; 
-    margin-bottom: 10px; 
+    width: 80%;
+    margin-bottom: 10px;
   }
 }
 
@@ -128,7 +128,112 @@
   }
 
   .widget {
-    width: 100%; 
-    margin-bottom: 10px; 
+    width: 100%;
+    margin-bottom: 10px;
   }
+}
+
+.middle-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 1600px) {
+  .middle-section {
+    width: 1360px;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .middle-section {
+    width: 1300px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .middle-section {
+    width: 1150px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .middle-section {
+    width: 1000px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .middle-section {
+    width: 550px;
+  }
+}
+
+.middle-section .widget {
+  height: 350px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 10px;
+  box-shadow: 5px 5px 5px #939393;
+}
+
+.middle-section .widget.center {
+  width: 1340px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1600px) {
+  .middle-section .widget.center {
+    width: 1000px;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .middle-section .widget.center {
+    width: 800px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .middle-section .widget.center {
+    width: 1000px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .middle-section .widget.center {
+    width: 485px;
+  }
+}
+
+.bottom-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom-section .widget {
+  height: 250px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 10px;
+  box-shadow: 5px 5px 5px #939393;
+}
+
+.bottom-section .widget.center {
+  width: 670px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .bottom-section .widget.center {
+    width: 570px;
+  }
+}
+
+.imgBanner {
+  width: 230px;
+  display: flex;
+  gap: 10px;
+  height: 130px;
 }

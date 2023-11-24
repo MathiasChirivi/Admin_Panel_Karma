@@ -21,6 +21,7 @@ export class DashboardComponent implements OnInit {
   bannersCount:any;
   categoriesCount:any;
   citiesCount:any;
+  banners:any;
 
   constructor(private dataService: DataService) {}
 
@@ -29,6 +30,7 @@ export class DashboardComponent implements OnInit {
     this.getSummBanners();
     this.getSummCategories();
     this.getSummCities();
+    this.getCoverBanners()
   }
 
   getSumNews() {
@@ -45,7 +47,7 @@ export class DashboardComponent implements OnInit {
       if (res && res) {
         this.bannersCount = res;
       }
-      console.log(res);
+      // console.log(res);
     });
   }
 
@@ -54,7 +56,7 @@ export class DashboardComponent implements OnInit {
       if (res && res) {
         this.categoriesCount = res;
       }
-      console.log(res);
+      // console.log(res);
     });
   }
 
@@ -62,6 +64,15 @@ export class DashboardComponent implements OnInit {
     this.dataService.getCountCities().subscribe((res: any) => {
       if (res && res) {
         this.citiesCount = res;
+      }
+      // console.log(res);
+    });
+  }
+
+  getCoverBanners(){
+    this.dataService.getCoverBanners().subscribe((res: any) => {
+      if (res && res.data) {
+        this.banners = res.data;
       }
       console.log(res);
     });
