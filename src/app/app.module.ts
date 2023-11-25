@@ -17,9 +17,11 @@ import { ContactsComponent } from './components/contacts/contacts.component';
 import { CitiesComponent } from './components/cities/cities.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
 
 import { RouterModule, Routes } from "@angular/router";
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { FormsNewsComponent } from './components/forms-news/forms-news.component';
 
 const appRoutes: Routes = [
   {path:'' , component:NewsComponent }
@@ -39,7 +41,8 @@ const appRoutes: Routes = [
     CategoriesComponent,
     ContactsComponent,
     CitiesComponent,
-    CarouselComponent
+    CarouselComponent,
+    FormsNewsComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,9 @@ const appRoutes: Routes = [
     FontAwesomeModule,
     RouterModule.forRoot(appRoutes),
     HttpClientModule,
-    CarouselModule
+    CarouselModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

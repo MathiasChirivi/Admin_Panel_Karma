@@ -35,4 +35,8 @@ export class DataService {
   getAllNews(){
     return this.httpClient.get('http://127.0.0.1:8000/api/news/getAll')
   }
+
+  insertNews(url: string, body: {}){
+    return this.httpClient.post(url, body);
+  }
 }

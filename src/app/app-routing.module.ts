@@ -8,6 +8,7 @@ import { CommentsComponent } from './components/comments/comments.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { CitiesComponent } from './components/cities/cities.component';
+import { FormsNewsComponent } from './components/forms-news/forms-news.component';
 
 const routes: Routes = [
   {path:'Dashboard', component: DashboardComponent,},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path:'Categories', component:CategoriesComponent},
   {path:'Contacts', component:ContactsComponent},
   {path:'Cities', component:CitiesComponent},
+  {path:'AddNews', component:FormsNewsComponent}
 ];
 
 @NgModule({
