@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CarouselModule } from 'primeng/carousel';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 
 import { RouterModule, Routes } from "@angular/router";
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 const appRoutes: Routes = [
   {path:'' , component:NewsComponent }
@@ -36,7 +38,8 @@ const appRoutes: Routes = [
     CommentsComponent,
     CategoriesComponent,
     ContactsComponent,
-    CitiesComponent
+    CitiesComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +47,7 @@ const appRoutes: Routes = [
     FontAwesomeModule,
     RouterModule.forRoot(appRoutes),
     HttpClientModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

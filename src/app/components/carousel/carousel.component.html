@@ -1,0 +1,14 @@
+<div class="card">
+    <p-carousel [value]="banners" [numVisible]="3" [numScroll]="3" [circular]="false" [responsiveOptions]="responsiveOptions">
+        <ng-template let-banners pTemplate="item">
+            <div class="border-1 surface-border border-round m-2 text-center py-5 px-3">
+                <div class="mb-3">
+                    <img src="{{banners.cover}}" class="imgBanner" alt="">
+                </div>
+                <div>
+                    <h4 class="mb-1 textColor">{{ banners.text }}</h4>
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+</div>

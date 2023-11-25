@@ -1,0 +1,20 @@
+.imgBanner{
+    width: 70%;
+}
+
+@media only screen and (max-width: 340px) {
+    .imgBanner {
+      width: 40%;
+    }
+  }
+
+.textColor{
+    width: 80%;
+    color: black;
+}
+
+.p-carousel-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 40px !important;
+}

@@ -1,6 +1,8 @@
 <div class="top-section">
+  <h3 class="marginDate">Explore date Dashboard</h3>
     <div class="widget-container">
         <div class="widget green">
+
           <div class="icon">
             <fa-icon [icon]="faNewspaper"></fa-icon>
           </div>
@@ -38,16 +40,26 @@
         </div>
       </div>
 </div>
+<h3 class="marginChannels">Explore Channels</h3>
 <div class="middle-section">
     <div class="widget center">
-        <div *ngFor="let item of banners">
-            <img class="imgBanner" src="{{item.cover}}" alt="">
-        </div>
-    </div>
+      <app-carousel></app-carousel>
   </div>
-  <div class="bottom-section">
-    <div class="widget left">
-    </div>
-    <div class="widget right">
-    </div>
+<h3 class="marginChannels">Explore News</h3>
+      <div class="image-list">
+        <div class="image-item" *ngFor="let item of news">
+          <div class="image-container">
+            <img [src]="item.cover" alt="Image">
+          </div>
+          <div class="informationNews">
+            <div class="title textBlack">{{ item.title }}</div>
+            <div class="flexDirectionInfo">
+              <div class="like textBlack"><fa-icon class="likeMargin" [icon]="faThumbsUp"></fa-icon>{{ item.likes }}</div>
+              <div class="like textBlack"><fa-icon class="likeMargin" [icon]="faComment"></fa-icon>{{ item.comments }}</div>
+            </div>
+            <div class="title textBlack">City: {{ item.city_name }}</div>
+            <div class="title authorAlign textBlack">Created: {{ item.author_first_name}}</div>
+          </div>
+        </div>
+      </div>
   </div>

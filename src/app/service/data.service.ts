@@ -31,4 +31,8 @@ export class DataService {
   getCoverBanners(){
     return this.httpClient.get('http://127.0.0.1:8000/api/banners/getAll');
   }
+
+  getAllNews(){
+    return this.httpClient.get('http://127.0.0.1:8000/api/news/getAll')
+  }
 }

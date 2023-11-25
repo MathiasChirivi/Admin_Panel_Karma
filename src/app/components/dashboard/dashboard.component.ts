@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/service/data.service';
-import {faNewspaper, faThumbsUp, faBandage, faList, faCity} from '@fortawesome/free-solid-svg-icons';
+import {faNewspaper, faThumbsUp, faBandage, faList, faCity, faComment} from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -15,6 +15,7 @@ export class DashboardComponent implements OnInit {
   faBandage = faBandage;
   faList = faList;
   faCity = faCity;
+  faComment = faComment;
 
   
   newsCount: any;
@@ -22,6 +23,7 @@ export class DashboardComponent implements OnInit {
   categoriesCount:any;
   citiesCount:any;
   banners:any;
+  news:any;
 
   constructor(private dataService: DataService) {}
 
@@ -31,6 +33,7 @@ export class DashboardComponent implements OnInit {
     this.getSummCategories();
     this.getSummCities();
     this.getCoverBanners()
+    this.getNews()
   }
 
   getSumNews() {
@@ -74,7 +77,16 @@ export class DashboardComponent implements OnInit {
       if (res && res.data) {
         this.banners = res.data;
       }
-      console.log(res);
+      // console.log(res);
+    });
+  }
+
+  getNews(){
+    this.dataService.getAllNews().subscribe((res: any) => {
+      if (res && res.data) {
+        this.news = res.data.slice(0, 6);
+        console.log(this.news)
+      }
     });
   }
 }
