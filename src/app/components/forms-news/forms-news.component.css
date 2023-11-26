@@ -8,14 +8,14 @@ button{
 }
 
 .success-banner {
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50; 
     color: white;
     padding: 10px;
     text-align: center;
  }
  
  .error-banner {
-    background-color: #f44336; /* Red */
+    background-color: #f44336;
     color: white;
     padding: 10px;
     text-align: center;
