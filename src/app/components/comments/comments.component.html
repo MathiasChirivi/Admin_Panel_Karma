@@ -1,1 +1,20 @@
-<p>comments works!</p>
+<h1>Comments News</h1>
+
+<table id="customers">
+  <tr>
+    <th>News</th>
+    <th>Url News</th>
+    <th>Comments</th>
+  </tr>
+  <tr *ngFor="let item of news">
+    <td>{{ item.title }}</td>
+    <td>{{ item.live_url }}</td>
+    <td>{{ item.comments }}</td>
+  </tr>
+</table>
+
+
+<div class="chart-container">
+    <canvas id="commentChart"></canvas>
+  </div>
+
