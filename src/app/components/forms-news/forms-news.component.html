@@ -1,3 +1,7 @@
+<div *ngIf="showSuccessMessage" class="success-banner">Form submitted successfully!</div>
+<div *ngIf="showErrorMessage" class="error-banner">Error submitting form. Please try again.</div>
+
+
 <form [formGroup]="newsForm" (ngSubmit)="submitForm()">
     <label for="cate_id">Cate ID:</label>
     <input type="text" id="cate_id" name="cate_id" formControlName="cate_id" required>

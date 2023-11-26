@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { DataService } from 'src/app/service/data.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-forms-news',
@@ -9,6 +10,10 @@ import { DataService } from 'src/app/service/data.service';
 })
 export class FormsNewsComponent implements OnInit {
   newsForm!: FormGroup;
+  showSuccessMessage: boolean = false;
+  showErrorMessage: boolean = false;
+
+  private dataServiceSubscription: Subscription | undefined;
 
   constructor(private dataService: DataService) {}
 
@@ -37,7 +42,25 @@ export class FormsNewsComponent implements OnInit {
   }
 
   submitForm() {
-    this.dataService.insertNews('http://127.0.0.1:8000/api/news/create', this.newsForm.value);
-    console.log('Form Data:', this.newsForm.value);
-  }
+    this.dataServiceSubscription = this.dataService.insertNews('http://127.0.0.1:8000/api/news/create', this.newsForm.value)
+       .subscribe(
+          () => {
+             this.showSuccessMessage = true;
+             this.showErrorMessage = false;
+             console.log('Form submitted successfully');
+          },
+          (error: any) => {
+             this.showSuccessMessage = false;
+             this.showErrorMessage = true;
+             console.error('Error submitting form', error);
+          }
+       );
+ }
+
+ ngOnDestroy() {
+    // Unsubscribe to avoid memory leaks
+    if (this.dataServiceSubscription) {
+       this.dataServiceSubscription.unsubscribe();
+    }
+ }
 }

@@ -6,3 +6,18 @@ form{
 button{
     width: 50%;
 }
+
+.success-banner {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px;
+    text-align: center;
+ }
+ 
+ .error-banner {
+    background-color: #f44336; /* Red */
+    color: white;
+    padding: 10px;
+    text-align: center;
+ }
+ 
