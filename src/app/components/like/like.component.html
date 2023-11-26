@@ -1,1 +1,14 @@
-<p>like works!</p>
+<h1>Like News</h1>
+
+<table id="customers">
+  <tr>
+    <th>News</th>
+    <th>Url News</th>
+    <th>Like</th>
+  </tr>
+  <tr *ngFor="let item of news">
+    <td>{{ item.title }}</td>
+    <td>{{ item.live_url }}</td>
+    <td>{{ item.likes }}</td>
+  </tr>
+</table>

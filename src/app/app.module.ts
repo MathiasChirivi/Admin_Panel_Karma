@@ -22,6 +22,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from "@angular/router";
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { FormsNewsComponent } from './components/forms-news/forms-news.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const appRoutes: Routes = [
   {path:'' , component:NewsComponent }
@@ -52,7 +53,8 @@ const appRoutes: Routes = [
     HttpClientModule,
     CarouselModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

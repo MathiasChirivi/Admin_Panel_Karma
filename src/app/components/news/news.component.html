@@ -1,3 +1,25 @@
-<div *ngFor="let new of news">
-    <div>{{new.title}}</div>
+<div class="containerNews">
+  <figure class="widget" *ngFor="let item of news">
+    <div class="image"><img src="{{ item.cover }}" alt="" /></div>
+    <figcaption>
+      <div class="date">
+        <span class="day">{{ getDayOfMonth(item.created_at) }}</span>
+        <span class="month">{{ getMonth(item.created_at) }}</span>
+      </div>
+      <h3>{{ item.title }}</h3>
+      <p class="truncateContent">{{item.content}}</p>
+      <footer>
+        <div class="love">
+            <i class="ion-heart"></i>{{ item.likes }}
+        </div>
+        <div class="comments">
+          <i class="ion-chatboxes"></i>{{ item.comments }}
+        </div>
+        <div class="write">
+            <i class="ion-person"></i>{{ item.author_first_name }}
+          </div>
+      </footer>
+    </figcaption>
+    <a href="#"></a>
+  </figure>
 </div>
