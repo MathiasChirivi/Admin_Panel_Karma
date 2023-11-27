@@ -1,1 +1,15 @@
-<p>banners works!</p>
+<div class="containerBanners">
+    <figure class="widget" *ngFor="let item of banners">
+      <div class="image"><img src="{{ item.cover }}" alt="" /></div>
+      <figcaption>
+        <h3>{{ item.value }}</h3>
+        <p class="truncateContent">{{item.text}}</p>
+        <footer>
+          <div class="love">
+              <p>Type: {{ item.type }}</p>
+          </div>
+        </footer>
+      </figcaption>
+    </figure>
+  </div>
+  

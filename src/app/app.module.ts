@@ -24,6 +24,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { FormsNewsComponent } from './components/forms-news/forms-news.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SingleNewsComponent } from './components/single-news/single-news.component';
+import { EditNewsComponent } from './components/edit-news/edit-news.component';
 
 const appRoutes: Routes = [
   {path:'' , component:NewsComponent }
@@ -45,7 +46,8 @@ const appRoutes: Routes = [
     CitiesComponent,
     CarouselComponent,
     FormsNewsComponent,
-    SingleNewsComponent
+    SingleNewsComponent,
+    EditNewsComponent
   ],
   imports: [
     BrowserModule,

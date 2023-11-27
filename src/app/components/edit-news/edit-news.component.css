@@ -31,7 +31,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.updateNews:hover {
   background-color: #45a049;
 }
 
@@ -53,11 +53,11 @@ button:hover {
   color: white;
 }
 
-.flexButton {
+.buttonFlex {
   display: flex;
   justify-content: space-around;
 }
 
-.buttonNews {
+.buttonNews{
   background-color: cornflowerblue;
 }

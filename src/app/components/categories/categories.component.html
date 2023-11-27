@@ -1,1 +1,15 @@
-<p>categories works!</p>
+<div class="containerCategories">
+    <figure class="widget" *ngFor="let item of categories">
+      <div class="image"><img src="{{ item.cover }}" alt="" /></div>
+      <figcaption>
+        <p >{{item.name}}</p>
+        <footer>
+            <div class="love">
+                <span class="color-box" [style.backgroundColor]="item.title_color"></span>
+                {{ item.title_color }}
+            </div>
+          </footer>
+      </figcaption>
+    </figure>
+  </div>
+  

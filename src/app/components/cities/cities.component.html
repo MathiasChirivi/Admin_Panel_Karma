@@ -1,9 +1,8 @@
-<div class="containerNews">
+<div class="containerCities">
     <figure class="widget" *ngFor="let item of cities">
       <div class="image"><img src="{{ item.cover }}" alt="" /></div>
       <figcaption>
         <h3>{{ item.name }}</h3>
-        <p class="truncateContent">{{item.content}}</p>
         <footer>
           <div class="love">
               <p>Lat: {{ item.lat }}</p>

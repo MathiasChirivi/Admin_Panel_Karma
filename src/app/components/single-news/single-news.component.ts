@@ -35,9 +35,7 @@ export class SingleNewsComponent implements OnInit {
   deleteNews() {
     if (confirm('Are you sure you want to delete this news?')) {
       this.dataService.deleteNews(this.news.id).subscribe((res: any) => {
-        // Assuming the API returns a success message or status
         if (res && res.success) {
-          // Optionally, you can navigate to the news listing page after deletion
           this.router.navigate(['/News']);
         }
       });

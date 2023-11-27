@@ -10,6 +10,7 @@ import { ContactsComponent } from './components/contacts/contacts.component';
 import { CitiesComponent } from './components/cities/cities.component';
 import { FormsNewsComponent } from './components/forms-news/forms-news.component';
 import { SingleNewsComponent } from './components/single-news/single-news.component';
+import { EditNewsComponent } from './components/edit-news/edit-news.component';
 
 const routes: Routes = [
   {path:'Dashboard', component: DashboardComponent,},
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path:'Categories', component:CategoriesComponent},
   {path:'Contacts', component:ContactsComponent},
   {path:'Cities', component:CitiesComponent},
-  {path:'AddNews', component:FormsNewsComponent}
+  {path:'AddNews', component:FormsNewsComponent},
+  { path: 'news/:id/edit', component: EditNewsComponent },
 ];
 
 @NgModule({

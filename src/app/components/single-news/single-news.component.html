@@ -12,4 +12,5 @@
 <div class="buttonDisplay">
     <button [routerLink]="['/News']">Back to News</button>
     <button class="deleteNews" (click)="deleteNews()">Delete News</button>
+    <button *ngIf="news && news.id" [routerLink]="['/news', news.id, 'edit']">Edit News</button>
 </div>

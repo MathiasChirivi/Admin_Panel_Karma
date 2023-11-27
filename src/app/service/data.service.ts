@@ -54,4 +54,13 @@ export class DataService {
   getCities(){
     return this.httpClient.get('http://127.0.0.1:8000/api/cities/getAll')
   }
+
+  getCategories(){
+    return this.httpClient.get('http://127.0.0.1:8000/api/categories/getAll')
+  }
+
+  updateNews(id: string, newData: any): Observable<any> {
+    const url = 'http://127.0.0.1:8000/api/news/update';
+    return this.httpClient.post(url, { id, ...newData });
+  }
 }

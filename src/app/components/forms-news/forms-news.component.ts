@@ -6,7 +6,7 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-forms-news',
   templateUrl: './forms-news.component.html',
-  styleUrls: ['./forms-news.component.css']
+  styleUrls: ['./forms-news.component.css'],
 })
 export class FormsNewsComponent implements OnInit {
   newsForm!: FormGroup;
@@ -42,25 +42,25 @@ export class FormsNewsComponent implements OnInit {
   }
 
   submitForm() {
-    this.dataServiceSubscription = this.dataService.insertNews('http://127.0.0.1:8000/api/news/create', this.newsForm.value)
-       .subscribe(
-          () => {
-             this.showSuccessMessage = true;
-             this.showErrorMessage = false;
-             console.log('Form submitted successfully');
-          },
-          (error: any) => {
-             this.showSuccessMessage = false;
-             this.showErrorMessage = true;
-             console.error('Error submitting form', error);
-          }
-       );
- }
+    this.dataServiceSubscription = this.dataService
+      .insertNews('http://127.0.0.1:8000/api/news/create', this.newsForm.value)
+      .subscribe(
+        () => {
+          this.showSuccessMessage = true;
+          this.showErrorMessage = false;
+          console.log('Form submitted successfully');
+        },
+        (error: any) => {
+          this.showSuccessMessage = false;
+          this.showErrorMessage = true;
+          console.error('Error submitting form', error);
+        }
+      );
+  }
 
- ngOnDestroy() {
-    // Unsubscribe to avoid memory leaks
+  ngOnDestroy() {
     if (this.dataServiceSubscription) {
-       this.dataServiceSubscription.unsubscribe();
+      this.dataServiceSubscription.unsubscribe();
     }
- }
+  }
 }

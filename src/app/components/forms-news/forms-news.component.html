@@ -61,6 +61,10 @@
     <label for="main_characters">Main Characters:</label>
     <input type="text" id="main_characters" name="main_characters" formControlName="main_characters" required>
   
-    <button type="submit">Invia</button>
+    <div class="flexButton">
+      <button type="submit">Invia</button>
+      <button class="buttonNews" [routerLink]="['/News']">Back to News</button>
+    </div>
+
   </form>
   </div>
