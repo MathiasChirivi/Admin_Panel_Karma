@@ -1,0 +1,37 @@
+.containerNews{
+    max-width: 100% ;
+    display: flex;
+    padding: 20px;
+}
+
+.imgNews{
+    width: 400px;
+    margin-right: 50px;
+}
+
+.marginTop{
+    margin-top: 20px;
+}
+
+button {
+    background-color: #4c51af;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.deleteNews{
+    background-color: #b61616;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.buttonDisplay{
+    display: flex;
+    justify-content: space-around;
+}

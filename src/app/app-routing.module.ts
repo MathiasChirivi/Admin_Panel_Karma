@@ -9,10 +9,12 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { CitiesComponent } from './components/cities/cities.component';
 import { FormsNewsComponent } from './components/forms-news/forms-news.component';
+import { SingleNewsComponent } from './components/single-news/single-news.component';
 
 const routes: Routes = [
   {path:'Dashboard', component: DashboardComponent,},
   {path:'News', component:NewsComponent},
+  {path: 'News/:id', component: SingleNewsComponent },
   {path:'Banners', component:BannersComponent},
   {path:'Like', component:LikeComponent},
   {path:'Comments', component:CommentsComponent},

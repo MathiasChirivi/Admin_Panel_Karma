@@ -1,0 +1,15 @@
+<div class="containerNews" *ngIf="news">
+    <div>
+        <img *ngIf="news.cover" class="imgNews" src="{{ news.cover }}" alt="">
+    </div>
+    <div class="containerDescription">
+        <h2><strong>Title: </strong>{{ news.title }}</h2>
+        <p class="marginTop"><strong>Live: </strong> {{ news.live_url }}</p>
+        <p class="marginTop"><strong>Content: </strong> {{ news.content }}</p>
+        <p class="marginTop"><strong>Main characters: </strong>{{news.main_characters}}</p>
+    </div>
+</div>
+<div class="buttonDisplay">
+    <button [routerLink]="['/News']">Back to News</button>
+    <button class="deleteNews" (click)="deleteNews()">Delete News</button>
+</div>
