@@ -18,7 +18,7 @@ export class CarouselComponent implements OnInit {
     this.responsiveOptions = [
       {
         breakpoint: '1199px',
-        numVisible: 1,
+        numVisible: 3,
         numScroll: 1
       },
       {
@@ -56,7 +56,7 @@ export class CarouselComponent implements OnInit {
       case 'OUTOFSTOCK':
         return 'danger';
       default:
-        return 'info'; // Cambia il valore di default secondo le tue esigenze
+        return 'info';
     }
   }
 }

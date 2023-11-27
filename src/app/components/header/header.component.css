@@ -32,7 +32,6 @@
   font-weight: bold;
 }
 
-/* Media query per rendere la barra responsive */
 @media only screen and (max-width: 768px) {
   .header {
     height: 70px;

@@ -196,7 +196,13 @@
 
 @media only screen and (max-width: 1200px) {
   .middle-section .widget.center {
-    width: 485px;
+    width: 800px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .middle-section .widget.center {
+    width: 400px;
   }
 }
 
@@ -234,6 +240,12 @@
 
 .marginChannels{
   margin-top: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .marginChannels{
+    margin-top: 50px;
+  }
 }
 
 
@@ -306,4 +318,12 @@ img {
 
 .authorAlign{
   text-align: end;
+}
+
+@media only screen and (max-width: 768px) {
+  .image-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
